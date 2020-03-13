@@ -148,12 +148,12 @@ def update_map(map_day):
         'data': [
             dict(
                 type='scattergeo',
-                long = map_df['Longitude'],
-                lat=map_df['Latitude'],
-                text=map_df.apply(lambda r: r['Country/Region'] +' (' + str(r['Confirmed'])+')', axis=1),
-                mode='markers',
+                lon = map_df['Longitude'],
+                lat = map_df['Latitude'],
+                text = map_df.apply(lambda r: r['Country/Region'] +' (' + str(r['Confirmed'])+')', axis=1),
+                mode = 'markers',
                 marker=dict(
-                    size=np.maximum(map_df['Confirmed']/1_000,5)
+                    size=np.maximum(map_df['Confirmed']/ 1_000 , 5)
                 )
             )
         ],
