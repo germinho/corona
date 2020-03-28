@@ -1,0 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #343633;
+}
+#variable {
+    background-color: white;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #bcbdc0
+}
+
+.Tab > *{
+    color: #8a8d91
+}
