@@ -158,7 +158,7 @@ app.layout = html.Div([
         Input('radioitems-input', 'value'),  
     ]
 )
-def update_statusBar(countries,variable):
+def update_CounterBar(countries,variable):
     graphs_df = []
     number = 0
     if countries != [] and type(countries) is list:
@@ -231,7 +231,6 @@ def update_model(variable):
     active_cases = country_df['Active']
     total_population = get_pop(variable)
     nb_steps = len(active_cases)
-    print(nb_steps)
     def SIR(t,y):
         S = y[0]
         I = y[1]
