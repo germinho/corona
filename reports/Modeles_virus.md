@@ -30,7 +30,7 @@ Pour la mise en place d’un modèle SIR, on doit définir deux paramètres qui 
 
 
 
-![](SIR.png)
+  ![40% center](figures/SIR.png)
 
 
 
