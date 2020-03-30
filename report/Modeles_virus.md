@@ -30,6 +30,18 @@ Pour la mise en place d’un modèle SIR, on doit définir deux paramètres qui 
 
 
 
+![](SIR.png)
+
+
+
+
+
+
+
+
+
+
+
 
 Le ***paramètre beta*** (β)  permet d’évaluer la contagion des individus sains en prenant en compte leur nombre ainsi que le nombre de personnes déjà affectées.   
 Le ***paramètre gamma*** (γ) quant à lui permet de prendre en compte la période nécessaire à la guérison et donc l’immunisation des personnes infectées.
@@ -44,12 +56,7 @@ Le ***paramètre gamma*** (γ) quant à lui permet de prendre en compte la péri
 
 
 
-
-
-
-
-
-Sources:
+*Sources*:
 
 https://towardsdatascience.com/social-distancing-to-slow-the-coronavirus-768292f04296
 
