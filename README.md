@@ -1,7 +1,7 @@
 corona
 ==============================
 
-coronavirus project
+coronavirus project by Xavier Giraud & Germain Landrieu
 
 Project Organization
 ------------
