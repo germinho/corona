@@ -34,7 +34,7 @@ DATA_FILE = os.path.join(ROOT_DIR,
 epidemie_df = (pd.read_csv(DATA_FILE, parse_dates=['Last Update'])
                .assign(day=lambda _df: _df['Last Update'].dt.date)
                .drop_duplicates(subset=['Country/Region', 'Province/State', 'day'])
-               [lambda df: df['day'] <= datetime.date(2020, 3, 29)]
+               [lambda df: df['day'] <= datetime.date(2020, 4, 2)]
               )
 print(epidemie_df['Country/Region'] == 'US')
 
@@ -75,13 +75,15 @@ app.layout = html.Div([
                             {'label': 'Active', 'value': 'Active'}
                         ],
                     value='Confirmed',
+                    labelStyle={'display': 'inline-block'}
                 ),
-                html.P("Filter by countries :"),
+                html.P(" "),
                 dcc.Dropdown(
                     id="countries",
                     options=countries,
                     multi=True,
                     className="dcc_control",
+                    placeholder="Select a country",
                 ),
             ],
             className="option_container"
@@ -190,7 +192,7 @@ def update_CounterBar(countries,variable):
     ]
 )
 def update_statusBar(variable):
-    return "Total "+variable+": "
+    return "Total "+variable
 
 
 
@@ -360,23 +362,26 @@ def update_map(map_day,variable):
                 text=map_df.apply(lambda r: r['Combined_Key'] + ' (' + str(r[variable]) + ')', axis=1),
                 mode='markers',
                 marker=dict(
-                    size=np.maximum(2*np.log(map_df[variable]), 5)
-                )
+                    size=np.maximum(2.5*np.log(map_df[variable]), 5),
+                    color = '#550202fa'
+                ),
             )
         ],
         'layout': dict(
             title=str(day),
+            titlefont=dict(size=25,color="#ffffff"),
             autosize=True,
             automargin=True,
-            margin=dict(l=30, r=30, b=20, t=40),
+            margin=dict(l=30, r=30, b=20, t=80),
             hovermode="closest",
-            plot_bgcolor="#F9F9F9",
-            paper_bgcolor="#F9F9F9",
+            plot_bgcolor="rgba(85, 2, 2, 0.98)",
+            paper_bgcolor="rgba(58, 54, 54, 0.301)",
             geo=dict(
+                    scope= "world",
                     showland = True,
                     landcolor = "rgb(212, 212, 212)",
-                    subunitcolor = "rgb(255, 255, 255)",
-                    countrycolor = "rgb(255, 255, 255)",
+                    subunitcolor = "rgba(85, 2, 2, 0.98)",
+                    countrycolor = "rgba(58, 54, 54, 0.745)",
                     showlakes = True,
                     lakecolor = "rgb(255, 255, 255)",
                     showsubunits = True,

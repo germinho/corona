@@ -1,16 +1,27 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #343633;
+    background-color: rgb(10, 44, 77);
 }
 h1, h2, h3, h4, h5, h6 {
-    color: #bcbdc0
+  font-size: 33px;
+  color: #ffffff;
+  text-align: center;
+  font-style: normal;
+  
+}
+#title_counter{
+  border:1px solid #df0d0d96;
+  font-size: 33px;
+  color: #ffffff;
+  text-align: center;
+  font-style: normal;
 }
 
 #Counter{
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
-  word-spacing: 2px;
-  color: rgb(62, 62, 63);
+  word-spacing: 3px;
+  color: rgba(251, 251, 255, 0.781);
   font-weight: 700;
   text-decoration: none;
   font-style: normal;
@@ -18,26 +29,28 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 h2{
-  box-shadow: 2px 2px 2px lightgrey;
-  background-color: #f9f9f9;
-  color: #343633
+  box-shadow: 2px 2px 2px #550202fa;
+  background-color: rgba(58, 54, 54, 0.745);
+  color: #ffffffe0;
 }
 .MainLayout{
     display: flex;
 }
 .count_container{
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border-radius: 10px;
+  background-color: rgba(58, 54, 54, 0.745);
   padding: 15px;
-  box-shadow: 2px 2px 2px lightgrey;
+  border:1px solid #550202fa;
+  box-shadow: 2px 2px 2px #550202fa;
   margin-bottom: 25px !important;
 }
 
 .option_container{
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: rgba(58, 54, 54, 0.745);
   padding: 15px;
-  box-shadow: 2px 2px 2px lightgrey;
+  border:1px solid #550202fa;
+  box-shadow: 2px 2px 2px #550202fa;
   margin-bottom: 25px !important;
   height:100%
 }
@@ -63,18 +76,24 @@ h2{
 }
 .main_container {
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: hsla(0, 4%, 22%, 0.745);
     margin: 10px;
     padding: 15px;
     position: relative;
-    box-shadow: 2px 2px 2px lightgrey;
+    border:1px solid rgba(85, 2, 2, 0.98);
+    box-shadow: 2px 2px 2px #550202fa;
     height:100%
 }
 #radioitems-input{
     display: flex;
     justify-content: space-between;
+    color: #ffffffe0;
     flex-direction: row;
     margin-block: 5px;
+
+}
+#radioitems-input:hover{
+  background-color:#550202fa;
 }
 #right-column {
     display: flex;
@@ -113,3 +132,7 @@ h2{
   .eight.columns {
     width: 65.3333333333%;
   }
+
+#Tabs_style {
+  font-size: 100px;
+}
